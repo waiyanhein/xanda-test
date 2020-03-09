@@ -9,10 +9,10 @@ Also you need to make sure that you started the Docker on your machine.
 - `docker-compose up --build -d`
 - `docker-compose exec php-fpm cp .env.example .env`
 - `docker-compose exec php-fpm composer install`
+- `docker-compose exec php-fpm php artisan passport:install`
 - `docker-compose exec php-fpm php artisan migrate:fresh --seed`
-- `docker-compose exec db mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS test;'`
-- `docker-compose exec db mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON test.* TO 'xanda'@'%';"`
-- `docker-compose exec php-fpm php artisan migrate:fresh --database=test`
+- `docker-compose exec db mysql -uroot -proot -e 'CREATE DATABASE IF NOT EXISTS testing;'`
+- `docker-compose exec db mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON testing.* TO 'xanda'@'%';"`
 - `npm install`
 - `npm run watch`
 
